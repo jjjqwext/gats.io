@@ -6,8 +6,6 @@ import websocket, json
 import time, random, socks5
 import requests
 
-print('\nbots by vedrogovna')
-
 FFALINK = ''
 
 servers = requests.post('https://io-8.com/find_instances',data = {"game": 'gats.io' }).json()
@@ -44,20 +42,6 @@ def rn():
 	while 1==1:
 		w = Thread(target = sss)
 		w.start()
-		w = Thread(target = sss)
-		w.start()
-		w = Thread(target = sss)
-		w.start()
-		w = Thread(target = sss)
-		w.start()
-		w = Thread(target = sss)
-		w.start()
-		w = Thread(target = sss)
-		w.start()
-		w = Thread(target = sss)
-		w.start()
-		w = Thread(target = sss)
-		w.start()
-		time.sleep(0.01)
+		time.sleep(0.001)
 
 rn()
