@@ -17,7 +17,10 @@ for srv in servers:
 		print(srv['url'])
 		break
 
-proxxx = '''your proxy'''
+proxxx = '''
+1.1.1.1:1111
+2.2.2.2:2222
+etc.''' #you need proxies to run this script
 
 def sss():
 
