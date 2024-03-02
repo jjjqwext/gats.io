@@ -23,17 +23,11 @@ proxxx = '''
 etc.''' #you need proxies to run this script
 
 def sss():
-
 	ws = websocket.WebSocket(sslopt={"cert_reqs": ssl.CERT_NONE})
 	prox = random.choice(proxxx.split('\n'))
-
 	header = {"User-Agent": 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36', "Origin":"https://gats.io"}
-	
 	try:
 		ws.connect('wss://'+FFALINK,header = header, origin= "https://gats.io", http_proxy_port=prox.split(":")[1],http_proxy_host=prox.split(":")[0],proxy_type="socks4", timeout = 5)
-		
-		ws.send('.',websocket.ABNF.OPCODE_BINARY)
-		ws.send('.',websocket.ABNF.OPCODE_BINARY)
 		ws.send('s,5,3,1',websocket.ABNF.OPCODE_BINARY)
 		#ws.send('k,6,1',websocket.ABNF.OPCODE_BINARY)
 		while 1==1:
